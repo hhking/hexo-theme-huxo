@@ -1,0 +1,78 @@
+<!-- @param {Boolean} center -->
+<% if (include.center){ %>
+<ul class="list-inline text-center">
+<% } else { %>
+<ul class="list-inline">
+<% } %>
+
+  <% if (theme.RSS){ %>
+  <li>
+    <a href="<%= theme.root + 'feed.xml' %>">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  <% } %>
+  <% if (theme.twitter_username){ %>
+  <li>
+    <a href="https://twitter.com/<%= theme.twitter_username %>">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  <% } %>
+  <% if (theme.zhihu_username){ %>
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/<%= theme.zhihu_username%>">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  <% } %>
+  <% if (theme.weibo_username){ %>
+  <li>
+    <a target="_blank" href="http://weibo.com/{{ theme.weibo_username }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  <% } %>
+  <% if (theme.facebook_username){ %>
+  <li>
+    <a target="_blank" href="https://www.facebook.com/{{ theme.facebook_username }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  <% } %>
+  <% if (theme.github_username){ %>
+  <li>
+    <a target="_blank" href="https://github.com/{{ theme.github_username }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  <% } %>
+  <% if (theme.linkedin_username){ %>
+  <li>
+    <a target="_blank" href="https://www.linkedin.com/in/{{ theme.linkedin_username }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  <% } %>
+</ul>

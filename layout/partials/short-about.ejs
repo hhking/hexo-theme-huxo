@@ -1,0 +1,14 @@
+<section class="visible-md visible-lg">
+  <hr>
+  <h5><a href="<%= config.root %>about">ABOUT ME</a></h5>
+  <div class="short-about">
+    <% if (theme['sidebar-avatar']){ %>
+    <img src="<%= theme['sidebar-avatar'] %>" />
+    <% } %>
+    <% if (theme['sidebar-about-description']) { %>
+    <p><%= theme['sidebar-about-description'] %></p>
+    <% } %>
+    <!-- SNS Link -->
+    <%- include('sns-links', { include: {} }) %>
+  </div>
+</section>

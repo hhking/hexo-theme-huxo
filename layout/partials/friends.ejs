@@ -1,0 +1,9 @@
+<% if (theme.friends){ %>
+<hr>
+<h5><%= theme.friends_title || 'FRIENDS' %></h5>
+<ul class="list-inline">
+  <% Object.keys(theme.friends).forEach(function(key) { %>
+    <li><a target="_blank" href="<%= theme.friends[key] %>"><%= key %></a></li>
+  <% }) %>
+</ul>
+<% } %>

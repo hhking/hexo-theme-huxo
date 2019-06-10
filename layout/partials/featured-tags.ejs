@@ -1,0 +1,20 @@
+<!-- {% comment %}
+    @param {boolean} bottom - bottom will render <hr>
+{% endcomment %} -->
+
+<% if (theme["featured-tags"]){ %>
+<section>
+    <% if (include.bottom){ %>
+        <hr class="hidden-sm hidden-xs">
+    <% } %>
+    <h5><a href='<%= config.root %>archive/'>FEATURED TAGS</a></h5>
+    <div class="tags">
+        <% const tags = site.tags.sort('length', -1) %>
+        <% tags.forEach((tag) => { %>
+          <% if(tag.length > theme['featured-condition-size']){ %>
+            <a href="<%= config.root %>archives/?tag=<%= encodeURIComponent(tag.name) %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>
+          <% } %>
+        <% }) %>
+    </div>
+</section>
+<% } %>

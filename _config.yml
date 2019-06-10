@@ -1,0 +1,40 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Contact: /contact
+  Archives: /archives
+
+header-img: /images/home-bg.jpg
+
+sidebar-avatar: /images/avatar.jpg
+sidebar-about-description: 日拱一卒，功不唐捐
+
+RSS: true
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+# 友链
+friends_title: FRIENDS
+friends:
+  22Infinite: https://www.22infinite.com/
+  Jsonz: https://jsonz1993.github.io/
+  XuYuwas: https://xuyuwas.github.io/
+
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+# # stylesheets loaded in the <head>
+# stylesheets:
+# - /css/hexo-theme-huxported.css
+
+# # scripts loaded in the end of the body
+# scripts:
+# - /js/hexo-theme-huxported.js

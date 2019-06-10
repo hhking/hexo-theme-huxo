@@ -1,0 +1,23 @@
+---
+layout: page
+---
+<%
+  console.log(page);
+%>
+<%- partial('partials/recent-posts') %>
+
+<!-- Pager -->
+<% if (page.total > 1) {%>
+<ul class="pager">
+  <% if (page.prev){ %>
+      <li class="previous">
+          <a href="<%- config.root %><%- page.prev_link %>">&larr; Newer Posts</a>
+      </li>
+  <% } %>
+  <% if (page.next){ %>
+      <li class="next">
+          <a href="<%- config.root %><%- page.next_link %>">Older Posts &rarr;</a>
+      </li>
+  <% } %>
+</ul>
+<% } %>

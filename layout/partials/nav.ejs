@@ -23,13 +23,14 @@
                     <li>
                         <a href="<%= config.root %>">Home</a>
                     </li>
-                    <% for(page in site.pages) { %>
+                    <% console.log(site.pages) %>
+                    <% site.pages.data.forEach(page => { %>
                       <% if(page.title && page["hide-in-nav"] != true) { %>
                         <li>
                           <a href="<%= config.root %><%= page.path.replace('index.html', '') %>"><%= page.title %></a>
                         </li>
                       <% } %>
-                    <% } %>
+                    <% })%>
                 </ul>
             </div>
         </div>

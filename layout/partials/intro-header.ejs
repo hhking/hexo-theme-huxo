@@ -103,8 +103,8 @@
           <% } else { %>
         <div class="site-heading">
         <% } %>
-          <h1><%= page.title || config.title %></h1>
-          <span class="subheading"><%= page.description || config.subtitle %></span>
+          <h1><%= page.title || (include.pageData && include.pageData.title) || config.title %></h1>
+          <span class="subheading"><%= page.description || (include.pageData && include.pageData.description) || config.subtitle %></span>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@
           </div>
       </a>
       <p class="post-meta">
-          Posted by <% post.author || config.author || config.title %> on <%= post.date.format(config.date_format) %>
+        Posted by <%= post.author || config.author || config.title %> on <%= post.date.format(config.date_format) %>
       </p>
   </div>
   <hr>

@@ -3,6 +3,8 @@
 
 ### [Demo &rarr;](https://blog.hhking.cn/)
 
+![](http://huangxuan.me/img/blog-desktop.jpg)
+
 ## Usage
 ```
 npm install hexo-renderer-scss --save
@@ -17,6 +19,10 @@ git clone https://github.com/hhking/hexo-theme-huxo.git themes/huxo
 ## Themes: http://hexo.io/themes/
 theme: huxo
 ```
+
+直接修改主题 `_config.yml`, 或者在 `source` 目录下新建 `_data/huxo.yml` 来配置主题
+
+详细配置可以参考我的博客配置：https://github.com/hhking/hhking.github.io/tree/hexo
 
 ## 做了一些微小的工作
 - 重构了部分代码

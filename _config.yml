@@ -16,8 +16,8 @@ sidebar-avatar: /images/avatar.jpg
 sidebar-about-description: 日拱一卒，功不唐捐
 
 RSS: true
-github_username: hhking
-juejin_username: 5712e9f6128fe1006cf35b3f
+github_username:
+juejin_username:
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
@@ -30,9 +30,9 @@ service-worker: false
 # 友链
 friends_title: FRIENDS
 friends:
-  22Infinite: https://www.22infinite.com/
-  Jsonz: https://jsonz1993.github.io/
-  XuYuwas: https://xuyuwas.github.io/
+  # 22Infinite: https://www.22infinite.com/
+  # Jsonz: https://jsonz1993.github.io/
+  # XuYuwas: https://xuyuwas.github.io/
 
 
 # MathJax rendering for layout:page (e.g. post preview)
@@ -41,12 +41,12 @@ page-mathjax: false
 # Gitalk
 # Demo: https://gitalk.github.io
 gitalk:
-  enable: true
-  github_id:  hhking # Github repo owner
-  repo:  hhking.github.io
-  client_id:  b0a40dabf23e7a07140f
-  client_secret:  b2279465e24b03c105ae5621e101305dc01a1573
-  admin_user:  hhking # GitHub repo owner and collaborators, only these guys can initialize github issues
+  enable: false
+  github_id:   # Github repo owner
+  repo:
+  client_id:
+  client_secret:
+  admin_user:   # GitHub repo owner and collaborators, only these guys can initialize github issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users.
   # You can create it manually by setting this option to true.
@@ -65,8 +65,9 @@ highlight_theme: normal
 
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
+# todo
 busuanzi_count:
-  enable: true
+  enable: false
   total_visitors: true
   total_visitors_icon: user
   total_views: true
@@ -89,8 +90,8 @@ busuanzi_count:
 
 # Baidu Analytics ID
 baidu_analytics:
-  tracking_id: 31feca94a9c3375ecc5a2e8d9a00b6a0
-  localhost_ignored: false
+  tracking_id:
+  localhost_ignored: true
 
 # Growingio Analytics ID
 # Copyright 2015-2018 GrowingIO, Inc. More info available at https://www.growingio.com
@@ -98,6 +99,6 @@ baidu_analytics:
 
 # Google Analytics
 google_analytics:
- tracking_id: UA-126640859-1
- localhost_ignored: false
+ tracking_id:
+ localhost_ignored: true
 

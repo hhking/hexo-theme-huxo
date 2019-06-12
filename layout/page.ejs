@@ -14,6 +14,15 @@ layout: layout
       <!-- PostList Container -->
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 postlist-container">
         <%- body %>
+
+        <!-- comment -->
+        <% console.log(page.comments) %>
+        <% if (page.comments) { %>
+          <% if ( theme.gitalk && theme.gitalk.enable) { %>
+            <div class="comments" id="gitalk-container">
+            </div>
+          <% } %>
+        <% } %>
       </div>
       <!-- Sidebar Container -->
       <div class="
@@ -39,6 +48,15 @@ layout: layout
                 postlist-container
             ">
           <%- body %>
+
+          <!-- comment -->
+          <% console.log(page.comments) %>
+          <% if (page.comments) { %>
+            <% if ( theme.gitalk && theme.gitalk.enable) { %>
+              <div class="comments" id="gitalk-container">
+              </div>
+            <% } %>
+          <% } %>
     		</div>
     <!-- Sidebar Container -->
             <div class="
@@ -58,7 +76,7 @@ layout: layout
                 <%- include('partials/friends') %>
     		</div>
         <% } %>
-	</div>
+  </div>
 </div>
 
 <% if (site['page-mathjax']){ %>

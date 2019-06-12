@@ -6,16 +6,18 @@ language: en
 menu:
   Home: /
   About: /about
-  Contact: /contact
+  # Contact: /contact
   Archives: /archives
-  Categories: /categories
+  # Categories: /categories
 
-header-img: /images/home-bg.jpg
+header-img: /img/home-bg.jpg
 
 sidebar-avatar: /images/avatar.jpg
 sidebar-about-description: 日拱一卒，功不唐捐
 
 RSS: true
+github_username: hhking
+juejin_username: 5712e9f6128fe1006cf35b3f
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
@@ -36,10 +38,28 @@ friends:
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
 
-# # stylesheets loaded in the <head>
-# stylesheets:
-# - /css/hexo-theme-huxported.css
+# Gitalk
+# Demo: https://gitalk.github.io
+gitalk:
+  enable: true
+  github_id:  hhking # Github repo owner
+  repo:  hhking.github.io
+  client_id:  b0a40dabf23e7a07140f
+  client_secret:  b2279465e24b03c105ae5621e101305dc01a1573
+  admin_user:  hhking # GitHub repo owner and collaborators, only these guys can initialize github issues
+  distraction_free_mode: true # Facebook-like distraction free mode
+  # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users.
+  # You can create it manually by setting this option to true.
+  create_issue_manually: true
+  # Gitalk's display language depends on user's browser or system environment
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value
+  # Available values: en, es-ES, fr, ru, zh-CN, zh-TW
+  language: zh-CN
 
-# # scripts loaded in the end of the body
-# scripts:
-# - /js/hexo-theme-huxported.js
+# Code Highlight theme
+# Available value:
+#    normal | night | night yilia | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+# night yilia - https://github.com/litten/hexo-theme-yilia
+highlight_theme: normal
+

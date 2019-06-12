@@ -129,12 +129,12 @@
 
 
 <!-- Side Catalog -->
-<% if (page.catalog){ %>
+<% if (page.catalog !== false){ %>
 <script type="text/javascript">
   function generateCatalog (selector) {
 
       // interop with multilangual
-      if ('{{ page.multilingual }}' == 'true') {
+      if ('<%= page.multilingual %>' == 'true') {
           _containerSelector = 'div.post-container.active'
       } else {
           _containerSelector = 'div.post-container'
@@ -171,7 +171,7 @@
    * Doc: https://github.com/davist11/jQuery-One-Page-Nav
    * Fork by Hux to support padding
    */
-  async('<%= config.root%>js/jquery.nav.js', function () {
+  async('<%= config.root %>js/jquery.nav.js', function () {
       $('.catalog-body').onePageNav({
           currentClass: "active",
           changeHash: !1,
@@ -240,4 +240,9 @@
   // init
   _render();
 </script>
+<% } %>
+
+<!-- gitalk -->
+<% if (page.comments && theme.gitalk && theme.gitalk.enable) { %>
+  <%- include('third-part/gitalk.ejs') %>
 <% } %>

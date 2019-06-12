@@ -64,10 +64,19 @@ layout: layout
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <!-- 网易云跟帖 评论框 end -->
                 <% } %>
+
+                <!-- comment -->
+                <% console.log(page.comments) %>
+                <% if (page.comments) { %>
+                  <% if ( theme.gitalk && theme.gitalk.enable) { %>
+                    <div class="comments" id="gitalk-container">
+                    </div>
+                  <% } %>
+                <% } %>
             </div>
 
     <!-- Side Catalog Container -->
-        <% if (page.catalog){ %>
+        <% if (page.catalog !== false){ %>
             <div class="
                 col-lg-2 col-lg-offset-0
                 visible-lg-block
@@ -90,10 +99,10 @@ layout: layout
                 sidebar-container">
 
                 <!-- Featured Tags -->
-                <% include('partials/featured-tags.ejs', { include: { bottom: true }}) %>
+                <%- include('partials/featured-tags.ejs', { include: { bottom: true }}) %>
 
                 <!-- Friends Blog -->
-                <% include('partials/friends.ejs') %>
+                <%- include('partials/friends.ejs') %>
             </div>
         </div>
     </div>
@@ -101,7 +110,7 @@ layout: layout
 
 <!-- add support for mathjax by voleking-->
 <% if (page.mathjax){ %>
-  <% include('partials/mathjax_support.ejs') %>
+  <%- include('partials/mathjax_support.ejs') %>
 <% } %>
 
 <% if (theme.netease_comment) { %>

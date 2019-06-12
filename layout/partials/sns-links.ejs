@@ -7,7 +7,7 @@
 
   <% if (theme.RSS){ %>
   <li>
-    <a href="<%= theme.root + 'feed.xml' %>">
+    <a href="<%= theme.root + 'atom.xml' %>">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -30,14 +30,14 @@
     <a target="_blank" href="https://www.zhihu.com/people/<%= theme.zhihu_username%>">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa  fa-stack-1x fa-inverse">知</i>
+        <i class="fa fa-stack-1x fa-inverse">知</i>
       </span>
     </a>
   </li>
   <% } %>
   <% if (theme.weibo_username){ %>
   <li>
-    <a target="_blank" href="http://weibo.com/{{ theme.weibo_username }}">
+    <a target="_blank" href="http://weibo.com/<%= theme.weibo_username %>">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
@@ -47,7 +47,7 @@
   <% } %>
   <% if (theme.facebook_username){ %>
   <li>
-    <a target="_blank" href="https://www.facebook.com/{{ theme.facebook_username }}">
+    <a target="_blank" href="https://www.facebook.com/<%= theme.facebook_username %>">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -57,7 +57,7 @@
   <% } %>
   <% if (theme.github_username){ %>
   <li>
-    <a target="_blank" href="https://github.com/{{ theme.github_username }}">
+    <a target="_blank" href="https://github.com/<%= theme.github_username %>">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -67,7 +67,7 @@
   <% } %>
   <% if (theme.linkedin_username){ %>
   <li>
-    <a target="_blank" href="https://www.linkedin.com/in/{{ theme.linkedin_username }}">
+    <a target="_blank" href="https://www.linkedin.com/in/<%= theme.linkedin_username %>">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -75,4 +75,14 @@
     </a>
   </li>
   <% } %>
+  <% if (theme.juejin_username){ %>
+    <li>
+      <a target="_blank" href="https://juejin.im/user/<%= theme.juejin_username%>" title="掘金 -> https://juejin.im/user/<%= theme.juejin_username%>">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-stack-1x fa-inverse">掘</i>
+        </span>
+      </a>
+    </li>
+    <% } %>
 </ul>

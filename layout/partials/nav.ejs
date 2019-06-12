@@ -20,16 +20,11 @@
         <div id="huxblog_navbar">
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="<%= config.root %>">Home</a>
-                    </li>
-                    <% site.pages.data.forEach(page => { %>
-                      <% if(page.title && page["hide-in-nav"] != true) { %>
-                        <li>
-                          <a href="<%= config.root %><%= page.path.replace('index.html', '') %>"><%= page.title %></a>
-                        </li>
-                      <% } %>
-                    <% })%>
+                    <% Object.keys(theme.menu).forEach(key => { %>
+                      <li>
+                        <a href="<%- url_for(theme.menu[key]) %>"><%= key %></a>
+                      </li>
+                    <% }) %>
                 </ul>
             </div>
         </div>

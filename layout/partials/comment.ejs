@@ -1,0 +1,22 @@
+<!-- comment -->
+<% if (page.comments) { %>
+  <% if (config.disqus_username){ %>
+  <!-- disqus 评论框 start -->
+  <div class="comment">
+      <div id="disqus_thread" class="disqus-thread"></div>
+  </div>
+  <!-- disqus 评论框 end -->
+  <% } %>
+
+  <% if (config.netease_comment){ %>
+  <!-- 网易云跟帖 评论框 start -->
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+  <!-- 网易云跟帖 评论框 end -->
+  <% } %>
+
+  <% if ( theme.gitalk && theme.gitalk.enable) { %>
+    <!-- gitalk -->
+    <div class="comments" id="gitalk-container">
+    </div>
+  <% } %>
+<% } %>

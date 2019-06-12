@@ -4,7 +4,7 @@ layout: layout
 
 <!-- Page Header -->
 <!-- {% include intro-header.html type='page' %} -->
-<%- include('partials/intro-header.ejs', { include: { type: 'page' }}) %>
+<%- include('partials/intro-header', { include: { type: 'page' }}) %>
 
 <!-- Main Content -->
 <div class="container">
@@ -16,7 +16,6 @@ layout: layout
         <%- body %>
 
         <!-- comment -->
-        <% console.log(page.comments) %>
         <% if (page.comments) { %>
           <% if ( theme.gitalk && theme.gitalk.enable) { %>
             <div class="comments" id="gitalk-container">
@@ -50,13 +49,7 @@ layout: layout
           <%- body %>
 
           <!-- comment -->
-          <% console.log(page.comments) %>
-          <% if (page.comments) { %>
-            <% if ( theme.gitalk && theme.gitalk.enable) { %>
-              <div class="comments" id="gitalk-container">
-              </div>
-            <% } %>
-          <% } %>
+          <%- include('partials/comment.ejs') %>
     		</div>
     <!-- Sidebar Container -->
             <div class="
@@ -79,7 +72,7 @@ layout: layout
   </div>
 </div>
 
-<% if (site['page-mathjax']){ %>
+<% if (theme['page-mathjax']){ %>
 <!-- Add support for Mathjax by Voleking-->
 <!-- If you want to see formulars well in post preview, Maybe you should add this.-->
 <!-- However, most of the time formulars may not appear in the post preview, you can delete it.-->

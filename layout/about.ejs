@@ -21,28 +21,3 @@ layout: page
     {{ about_en | markdownify }}
 </div> -->
 
-
-<% if (theme.disqus_username) { %>
-<!-- disqus 评论框 start -->
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
-
-    </div>
-</div>
-<!-- disqus 评论框 end -->
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "<%= theme.disqus_username %>";
-    var disqus_identifier = "<%= theme.disqus_username %>/<%= page.path %>";
-    var disqus_url = "<%- url_for(page.path) %>";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <!-- disqus 公共JS代码 end -->
-  <% } %>

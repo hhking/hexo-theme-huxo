@@ -1,88 +1,40 @@
 <!-- @param {Boolean} center -->
 <% if (include.center){ %>
-<ul class="list-inline text-center">
-<% } else { %>
-<ul class="list-inline">
-<% } %>
+  <ul class="list-inline text-center">
+  <% } else { %>
+  <ul class="list-inline">
+  <% } %>
 
-  <% if (theme.RSS){ %>
-  <li>
-    <a href="<%= theme.root + 'atom.xml' %>">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  <% } %>
-  <% if (theme.twitter_username){ %>
-  <li>
-    <a href="https://twitter.com/<%= theme.twitter_username %>">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  <% } %>
-  <% if (theme.zhihu_username){ %>
-  <li>
-    <a target="_blank" href="https://www.zhihu.com/people/<%= theme.zhihu_username%>">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-stack-1x fa-inverse">知</i>
-      </span>
-    </a>
-  </li>
-  <% } %>
-  <% if (theme.weibo_username){ %>
-  <li>
-    <a target="_blank" href="http://weibo.com/<%= theme.weibo_username %>">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  <% } %>
-  <% if (theme.facebook_username){ %>
-  <li>
-    <a target="_blank" href="https://www.facebook.com/<%= theme.facebook_username %>">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  <% } %>
-  <% if (theme.github_username){ %>
-  <li>
-    <a target="_blank" href="https://github.com/<%= theme.github_username %>">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  <% } %>
-  <% if (theme.linkedin_username){ %>
-  <li>
-    <a target="_blank" href="https://www.linkedin.com/in/<%= theme.linkedin_username %>">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  <% } %>
-  <% if (theme.juejin_username){ %>
+    <% if (theme.RSS){ %>
     <li>
-      <a target="_blank" href="https://juejin.im/user/<%= theme.juejin_username%>" title="掘金 -> https://juejin.im/user/<%= theme.juejin_username%>">
+      <a href="<%= theme.root + 'atom.xml' %>">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-stack-1x fa-inverse">掘</i>
+          <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     </li>
     <% } %>
-</ul>
+    <% if (theme.social) { %>
+      <% Object.keys(theme.social).forEach(key => { %>
+        <%
+          let valArray = theme.social[key].split('||');
+          let url = valArray[0];
+          let icon = valArray[1].trim();
+          let word = valArray[2];
+        %>
+        <li>
+          <a href="<%= url %>" target="_blank" title="<%= key + ' -> ' + url %>">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <% if (word) { %>
+                <i class="fa fa-stack-1x fa-inverse"><%= word %></i>
+              <% } else { %>
+                <i class="fa fa-<%= icon %> fa-stack-1x fa-inverse"></i>
+              <% } %>
+            </span>
+          </a>
+        </li>
+      <% }) %>
+    <% } %>
+  </ul>

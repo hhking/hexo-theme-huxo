@@ -15,9 +15,24 @@ header-img: /img/home-bg.jpg
 sidebar-avatar: /images/avatar.jpg
 sidebar-about-description: 日拱一卒，功不唐捐
 
-RSS: true
-github_username:
-juejin_username:
+# Set rss to false to disable feed link.
+# Leave rss as blank to use site's feed link, and install hexo-generator-feed: `npm install hexo-generator-feed --save`.
+# Set rss to specific value if you have burned your feed already.
+RSS:
+
+social:
+  # GitHub: https://github.com/yourname || github
+  # E-Mail: mailto:yourname@gmail.com || envelope
+  # Weibo: https://weibo.com/yourname || weibo
+  # Google: https://plus.google.com/yourname || google
+  # Twitter: https://twitter.com/yourname || twitter
+  # FB Page: https://www.facebook.com/yourname || facebook
+  # VK Group: https://vk.com/yourname || vk
+  # StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  # YouTube: https://youtube.com/yourname || youtube
+  # Instagram: https://instagram.com/yourname || instagram
+  # Skype: skype:yourname?call|chat || skype
+  # Juejin: juejinlink || || 掘
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags

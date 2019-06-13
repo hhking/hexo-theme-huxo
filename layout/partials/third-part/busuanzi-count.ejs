@@ -1,0 +1,22 @@
+<% if (theme.busuanzi_count.enable){ %>
+  <!-- todo: busuanzi 统计显示 -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <div class="busuanzi-count text-muted">
+    <% if(theme.busuanzi_count.total_visitors) { %>
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span id="busuanzi_value_site_uv"></span>
+    <% } %>
+    <% if (theme.busuanzi_count.total_visitors && theme.busuanzi_count.total_views) { %>
+      |
+    <% } %>
+    <% if(theme.busuanzi_count.total_visitors) { %>
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span id="busuanzi_value_site_pv"></span>
+    <% } %>
+  </div>
+<%} %>

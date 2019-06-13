@@ -29,3 +29,4 @@ theme: huxo
 - 修改百度和谷歌统计的配置，增加屏蔽 localhost 环境
 - 增加 gitalk 支持
 - 修改社交链接配置，更自由方便
+- 增加 [不蒜子](https://busuanzi.ibruce.info/) 统计

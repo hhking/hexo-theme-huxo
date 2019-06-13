@@ -4,7 +4,7 @@
 {% endcomment %} -->
 
 <%
-  const headerImg = (config.root + (page["header-img"] || theme["header-img"])).replace('//', '/');
+  const headerImg = (config.root + (page["header-img"] || (include.pageData && include.pageData["header-img"]) || theme["header-img"])).replace('//', '/');
 %>
 
 <% if (include.type == 'post') { %>

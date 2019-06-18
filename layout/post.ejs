@@ -30,6 +30,12 @@ layout: layout
 
                 <%- page.content || body %>
 
+                <% if (theme.creative_commons.license && theme.creative_commons.post) { %>
+                  <hr style="visibility: hidden;">
+                  <div>
+                    <%- include('partials/post-copyright.ejs') %>
+                  </div>
+                <% } %>
                 <hr style="visibility: hidden;">
                 <ul class="pager">
                     <% if (page.prev){ %>

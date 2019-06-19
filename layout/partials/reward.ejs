@@ -1,0 +1,22 @@
+<div id="reward-container">
+  <div><%= theme.reward_settings.comment %></div>
+  <button
+    id="reward-button"
+    disable="enable"
+    onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    赞赏
+  </button>
+  <div id="qr" style="display: none;">
+    <% Object.keys(theme.reward).map(key => { %>
+      <%
+        let rewardArr = theme.reward[key].split('|');
+        let url = rewardArr[0];
+        let name = rewardArr[1];
+      %>
+      <div style="display: inline-block">
+        <img src="<%= url %>" alt="<%= page.author || config.author + name %>"/>
+        <p><%= name %></p>
+      </div>
+    <% }) %>
+  </div>
+</div>

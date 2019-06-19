@@ -30,10 +30,15 @@ layout: layout
 
                 <%- page.content || body %>
 
+                <% if(theme.reward_settings.enable && theme.reward && (theme.reward.wechatpay || theme.reward.alipay)) { %>
+                  <hr style="visibility: hidden;">
+                  <%- include('partials/reward') %>
+                <% } %>
+
                 <% if (theme.creative_commons.license && theme.creative_commons.post) { %>
                   <hr style="visibility: hidden;">
                   <div>
-                    <%- include('partials/post-copyright.ejs') %>
+                    <%- include('partials/post-copyright') %>
                   </div>
                 <% } %>
                 <hr style="visibility: hidden;">

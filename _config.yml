@@ -128,3 +128,14 @@ creative_commons:
   sidebar: false
   post: true
   language: deed.zh
+
+# Reward (Donate)
+reward_settings:
+  # If true, reward would be displayed in every article by default.
+  # You can show or hide reward in a specific article throuth `reward: true | false` in Front Matter.
+  enable: true
+  comment: 如果这篇文章对你有帮助，那么不妨？
+
+reward:
+  # wechatpay: /images/wechatpay.png | 微信
+  # alipay: /images/alipay.png | 支付宝

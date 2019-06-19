@@ -1,5 +1,5 @@
 # Hexo Theme Huxo
-> 移植的主题 Hux Blog(V1.8), 感谢 Huxpro 设计这样一个完美的主题。同时也感谢 [Kaijun](https://github.com/Kaijun/hexo-theme-huxblog) 提供的参考。
+> 移植的主题 Hux Blog(V1.8), 感谢 [Huxpro](https://github.com/Huxpro/huxpro.github.io) 设计这样一个完美的主题。同时也感谢 [Kaijun](https://github.com/Kaijun/hexo-theme-huxblog) 提供的参考。
 
 ### [Demo &rarr;](https://blog.hhking.cn/)
 
